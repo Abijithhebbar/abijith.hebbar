@@ -1,8 +1,6 @@
-i=1
+
 n=int(input("enter the value"))
 a=0
-while i<=n:
+for i in range(1,n+1,1):
     a=a+i
-    i=i+1
 print(a)
-
