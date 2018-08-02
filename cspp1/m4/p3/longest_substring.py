@@ -1,0 +1,33 @@
+"""Assume s is a string of lower case characters.
+Write a program that prints the longest substring of s in
+which the letters occur in alphabetical order.
+For example, if s = 'azcbobobegghakl', then your program should print
+Longest substring in alphabetical order is: beggh
+In the case of ties, print the first substring.
+For example, if s = 'abcbcd', then your program should print
+Longest substring in alphabetical order is: abc
+Note: This problem may be challenging. We encourage you to work smart.
+If you've spent more than a few hours on this problem, we suggest that you
+move
+on to a different part of the course.
+If you have time, come back to this problem after you've had a
+break and cleared your head."""
+
+def main():
+    """to print the longest alphabetical series"""
+    var_a = input()
+    max_c = 0
+    gain_c = 0
+    count_c = 0
+    for i in range(len(var_a)-1):
+        if var_a[i] <= var_a[i+1]:
+            count_c += 1
+        else:
+            count_c = 0
+        if gain_c < count_c:
+            gain_c = count_c
+            max_c = i
+    d_max = max_c - gain_c + 1
+    print(var_a[d_max:d_max+gain_c+1])
+if __name__ == "__main__":
+    main()
