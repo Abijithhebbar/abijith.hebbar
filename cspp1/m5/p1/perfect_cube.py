@@ -17,9 +17,9 @@ def main():
     while guess_i**3 < inp_a:
         guess_i += 1
     if guess_i**3 == inp_a:
-        print(inp_a, " is a perfect cube")
+        print(inp_a," is a perfect cube")
     else:
-        print(inp_a, " is not a perfect cube")
+        print(inp_a," is not a perfect cube")
 if __name__ == "__main__":
     main()
     
