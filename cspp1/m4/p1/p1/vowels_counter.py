@@ -7,7 +7,7 @@
 def main():
     """
     main function
-    """
+    """ 
     var_a = input()
     v_str = ""
     c_str = ""
