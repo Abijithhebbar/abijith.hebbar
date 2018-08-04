@@ -8,7 +8,7 @@ NU_M = int(input())
 C_O = 1
 while C_O <= NU_M:
     if C_O%3 == 0 and C_O%5 == 0:
-        print("fizz")
+        print("Fizz")
         print("Buzz")
     elif C_O%3 == 0:
         print("Fizz")
