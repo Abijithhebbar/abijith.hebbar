@@ -2,10 +2,10 @@
 I_NT = int(input())
 I_C = 1
 C_O = 1
-N_UM =1
+N_UM = 1
 if I_NT != 0:
     if I_NT < 0:
-    N_UM = -1
+        N_UM = -1
     else:
         N_UM = 1
     while I_NT >= 1:
