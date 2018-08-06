@@ -58,7 +58,7 @@ def paying_debt_off_in_a_year(bal, annual_int_rate):
             new_bal = new_bal - guess
             new_bal = new_bal + (month_int_rate * new_bal)
             month += 1
-        if new_bal > 0 and new_bal >:
+        if new_bal > 0 and new_bal > epsilon:
             month_pay_lower_bound = guess
             new_bal = bal
         elif new_bal < 0 and new_bal < -epsilon:
