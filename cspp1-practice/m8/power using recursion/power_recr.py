@@ -9,12 +9,12 @@ def recur_power(base, exp):
     exp: int >= 0
     returns: int or float, base^exp
     '''
-    result = 1
     if exp == 0:
         return 1
+    elif exp == 1:
+        return base
     else:
-        result = result * base
-        return result * recur_power(base, exp-1)
+        return base * recur_power(base, exp-1)
 def main():
     """ main
     """
