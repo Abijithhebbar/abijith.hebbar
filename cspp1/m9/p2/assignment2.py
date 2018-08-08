@@ -12,7 +12,7 @@ def get_guessed_word(secret_word, letters_guessed):
     returns: string, comprised of letters and underscores that represents
       what letters in secret_word have been guessed so far.
     '''
-    str_a = ' '
+    str_a = ''
     for char in secret_word:
         if char in letters_guessed:
             str_a = str_a + char
