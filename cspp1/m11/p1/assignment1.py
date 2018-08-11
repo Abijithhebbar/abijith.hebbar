@@ -24,18 +24,22 @@ def get_word_score(word, n):
     's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
     }
     sum_0 = 0
+    L=len(word)
     for j in word:
         if j in SCRABBLE_LETTER_VALUES:
             sum_0 = sum_0 + SCRABBLE_LETTER_VALUES[j]
+    if n == L:
+        sum_0 = sum_0*L
+        return sum_0 + 50
    
-    return sum_0 * n
+    return sum_0 * L
 def main():
     '''
     Main function for the given problem
     '''
     data = input()
     data = data.split()
-    print(get_word_score(data[0], len(data[0])))
+    print(get_word_score(data[0], int(data[1])))
 
 
 if __name__ == "__main__":
