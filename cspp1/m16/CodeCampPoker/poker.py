@@ -25,15 +25,15 @@ def is_straight(hand):
     return True
 
 
-def high_card(hand):
-    l5 = []
-    for h in hand:
-        l5.append(card_values[h[0]])
-    l5.sort()
-    for c,s in range(0, len(l5)-3):
-        if c in "TKQJA":
-            return True
-    return False
+# def high_card(hand):
+#     l5 = []
+#     for h in hand:
+#         l5.append(card_values[h[0]])
+#     l5.sort()
+#     for c,s in range(0, len(l5)-3):
+#         if c in "TKQJA":
+#             return True
+#     return False
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -142,8 +142,8 @@ def hand_rank(hand):
         return 3
     elif one_pair(hand):
         return 2
-    elif high_card(hand):
-        return 1
+    # elif high_card(hand):
+    #     return 1
     else:
         return 0
 
