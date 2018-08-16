@@ -31,8 +31,13 @@ def is_straight(hand):
 #         l5.append(card_values[h[0]])
 #     l5.sort()
 #     for c,s in range(0, len(l5)-3):
-#         if c in "TKQJA":
+#         if c == T:
 #             return True
+#         elif c == k:
+#             return True
+#         elif c == A:
+#             return True
+#         elif c == Q:
 #     return False
 def is_flush(hand):
     '''
@@ -43,10 +48,10 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    temp = [s for c, s in hand]
-    if len(set(temp)) == 1:
-        return True
-    return False
+    for i in range(len(hand)-1):
+        if hand[i][1] != hand[i+1][i]:
+            return False
+    return True
     
 def four_of_a_kind(hand):
     '''four of a kind'''
@@ -127,12 +132,13 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
         return 9
-    elif is_flush(hand):
-        return 6
+    
     elif four_of_a_kind(hand):
         return 8
     elif three_of_a_kind(hand) and one_pair(hand):
         return 7
+    elif is_flush(hand):
+        return 6
     
     elif is_straight(hand):
         return 5
