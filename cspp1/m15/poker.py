@@ -3,7 +3,7 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-card_values = {'T':10,'J':11,'Q':12,'K':13,'A':14,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9}
+card_values = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9}
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -40,7 +40,7 @@ def is_flush(hand):
     return True
 def card_ranks(hand):
 
-    ranks=sorted(['--23456789TJQKA'.index(c) for c,s in hand])
+    ranks=sorted(['--23456789TJQKA'.index(c) for c, s in hand])
     ranks.reverse()
     return ranks
 def kind(ranks, n):
@@ -49,8 +49,8 @@ def kind(ranks, n):
             return r
     return 0
 def two_pair(ranks):
-    one=kind(ranks,2)
-    two=kind(sorted(ranks),2)
+    one=kind(ranks, 2)
+    two=kind(sorted(ranks), 2)
     if one and two:
         return (one,two)
     return None
@@ -64,21 +64,21 @@ def hand_rank(hand):
     '''
     ranks=card_ranks(hand)
     if is_straight(hand) and is_flush(hand):
-        return (8,ranks)
-    if kind(ranks,4):
-        return (7,kind(ranks,4),ranks)
-    if kind(ranks,3) and kind(ranks,2):
-        return (6,(kind(ranks,3),kind(ranks,2)))
+        return (8, ranks)
+    if kind(ranks, 4):
+        return (7, kind(ranks, 4), ranks)
+    if kind(ranks, 3) and kind(ranks, 2):
+        return (6, (kind(ranks, 3), kind(ranks, 2)))
     if is_flush(hand):
-        return (5,ranks)
+        return (5, ranks)
     if is_straight(hand):
-        return (4,ranks)
-    if kind(ranks,3):
-        return(3,kind(ranks,3),ranks)
+        return (4, ranks)
+    if kind(ranks, 3):
+        return(3, kind(ranks, 3), ranks)
     if two_pair(ranks):
-        return(2,two_pair(ranks),ranks)
-    if kind(ranks,2):
-        return(1,kind(ranks,2),ranks)
+        return(2, two_pair(ranks), ranks)
+    if kind(ranks, 2):
+        return(1, kind(ranks, 2), ranks)
     return(0,ranks)   
 
 def poker(hands):
