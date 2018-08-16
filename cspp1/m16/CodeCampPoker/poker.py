@@ -36,7 +36,6 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     temp = [s for c, s in hand]
-    print(len(set(temp)))
     if len(set(temp)) == 1:
         return True
     return False
