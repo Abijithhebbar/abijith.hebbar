@@ -89,9 +89,9 @@ def two_pair(hand):
 def one_pair(hand):
     '''one pair'''
     l3 = []
-    for h in hand
+    for h in hand:
         l3.append(card_values[h[0]])
- :   l3.sort()
+    l3.sort()
     for i in range(0, len(l3)-1):
         if(l3[i]) == (l3[i+1]):
             return True
