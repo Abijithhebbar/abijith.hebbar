@@ -35,12 +35,12 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    temp =[s for c,s in hand]
-    if set(temp):
+    temp  = [s for c,s in hand]
+    if len(set(temp)) == 1:
         return True
     return False
-    
-def four_of_a_kind(hand):
+
+ def four_of_a_kind(hand):
     '''four of a kind'''
     li = []
     for h in hand:
