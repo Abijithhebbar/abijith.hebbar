@@ -30,7 +30,6 @@ def similarity(dict_1, dict_2):
         denominator = math.sqrt(add_1) * math.sqrt(add_2)
     value_check = numerator/denominator
     return value_check
-   
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
@@ -46,10 +45,7 @@ def main():
         take two inputs and call the similarity function
     '''
     input1 = input().lower()
-    
     input2 = input().lower()
-    
-
     print(similarity(input1, input2))
 
 if __name__ == '__main__':
