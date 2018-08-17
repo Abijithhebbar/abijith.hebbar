@@ -10,10 +10,10 @@ def similarity(dict_1, dict_2):
     list_1 = ""
     list_2 = ""
     for i in dict_1:
-        if i not in "`~[]{}!@#$%^&*()_+-=?0123456789:;<>'":
+        if i not in "`~[]{}|!@#$%^&*()_+-=?0123456789:;<>'":
             list_1 += i
     for i in dict_2:
-        if i not in "[]{}`~!@#$%^&*()_+-=?0123456789:;<>'":
+        if i not in "[]{}`~!|@#$%^&*()_+-=?0123456789:;<>'":
             list_2 += i
     list_1 = list_1.split()
     list_2 = list_2.split()
