@@ -11,7 +11,7 @@ def similarity(dict_1, dict_2):
     list_2 = ""
     for i in dict_1:
         if i not in '!@#$%^&*()_+-=,.?1234567890':
-            if i not in"'":
+            if i not in"'": 
                 list_1 += i
     for i in dict_2:
         if i not in '!@#$%^&*()_+-=,.?1234567890':
@@ -19,7 +19,7 @@ def similarity(dict_1, dict_2):
                 list_2 += i
     list_1 = list_1.split()
     list_2 = list_2.split()
-    list_3 = list_1 +list_2
+    list_3 = list_1 + list_2
     adict = {}
     for word in list_3:
         if word not in load_stopwords(FILE_NAME).keys():
@@ -37,8 +37,8 @@ def load_stopwords(filename):
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(filename, 'r') as filename:
-        for line in filename:
+    with open(filename, 'r') as file:
+        for line in file:
             stopwords[line.strip()] = 0
     return stopwords
 
