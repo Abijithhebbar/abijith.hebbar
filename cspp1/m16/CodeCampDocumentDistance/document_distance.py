@@ -11,7 +11,7 @@ def similarity(dict_1, dict_2):
     list_2 = ""
     for i in dict_1:
         if i not in '!@#$%^&*()_+-=,.?1234567890':
-            if i not in"'": 
+            if i not in"'":
                 list_1 += i
     for i in dict_2:
         if i not in '!@#$%^&*()_+-=,.?1234567890':
