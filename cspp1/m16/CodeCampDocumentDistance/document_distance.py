@@ -27,7 +27,7 @@ def similarity(dict_1, dict_2):
     	numerator += adict[a_check][0]*adict[a_check][1]
     	add_1 += adict[a_check][0] ** 2
     	add_2 += adict[a_check][1] ** 2
-    	denominator = math.sqrt(add1) * math.sqrt(add2)
+    	denominator = math.sqrt(add_1) * math.sqrt(add_2)
     value_check = numerator/denominator
     return value_check
    
