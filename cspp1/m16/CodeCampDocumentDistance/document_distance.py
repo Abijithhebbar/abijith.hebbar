@@ -17,9 +17,9 @@ def similarity(dict_1, dict_2):
             list_2 += _
     list_1 = list_1.split()
     list_2 = list_2.split()
-    list_5 = list_1 +list_2
+    list_3 = list_1 +list_2
     adict = {}
-    for word in list_5:
+    for word in list_3:
         if word not in load_stopwords(FILE_NAME).keys():
             adict[word] = (list_1.count(word), list_2.count(word))
     numerator, add_1, add_2 = 0, 0, 0
