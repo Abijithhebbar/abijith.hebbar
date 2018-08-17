@@ -9,12 +9,12 @@ def similarity(dict_1, dict_2):
     '''
     list_1 = ""
     list_2 = ""
-    for h in dict_1:
-        if h not in '!@#$%^&*()_+-=?.,0123456789':
-            list_1 += h
-    for h in dict_2:
-        if h not in '!@#$%^&*()_+-=?.,0123456789':
-            list_2 += h
+    for _ in dict_1:
+        if _ not in '!@#$%^&*()_+-=?':
+            list_1 += _
+    for _ in dict_2:
+        if _ not in '!@#$%^&*()_+-=?':
+            list_2 += _
     list_1 = list_1.split()
     list_2 = list_2.split()
     list_3 = list_1 +list_2
