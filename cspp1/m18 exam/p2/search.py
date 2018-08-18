@@ -37,13 +37,13 @@ def search(search_index, query):
         collect all the values for the words that are in the search_index
         make a set of doc_id and return
     '''
-    a_dict ={}
+    a_dict = {}
     query = query.split()
     # query =query.splitline()
     for word in query:
         print(word)
         if word in search_index.keys():
-            a_dict[word] = query.count(word)
+            a_dict[word] = (query.count(word))
     #print(a_dict)
     for i in a_dict:
         print(a_dict[i])
@@ -66,7 +66,6 @@ def main():
 
     # read the number of search queries
     lines = int(input())
-    
     # read the search queries into a list
     queries = ''
     for i in range(lines):
