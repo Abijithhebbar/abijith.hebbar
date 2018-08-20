@@ -28,7 +28,6 @@
 
     Note: PyLint score need not be 10/10. Anything above 9.5 is good.
 '''
-FILE_NAME = "stopwords.txt"
 def search(search_index, query):
     '''
         function to search through the search index and return the results
@@ -37,27 +36,23 @@ def search(search_index, query):
         collect all the values for the words that are in the search_index
         make a set of doc_id and return
     '''
-    a_dict = {}
-    query = query.split()
-    # query =query.splitline()
-    for word in query:
-        print(word)
-        if word in search_index.keys():
-            a_dict[word] = (query.count(word))
-    #print(a_dict)
-    for i in a_dict:
-        # a_dict[i] = (a_dict[i])
-        print(a_dict[i])
-    return a_dict
-
+    query_1 = query.lower()
+    list_1 = query_1.split(" ")
+    doc_id = set()
+    for word_1 in list_1:
+        if word_1 in search_index:
+            target_1 = search_index[word_1]
+            for word_1 in target_1:
+                doc_id.add(word_1[0])
+    return doc_id
 def process_queries(search_index, queries):
     '''
         function to process the search queries
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    return search(search_index, queries)
-
+    for word in queries:
+        print(search(search_index, word))
 def main():
     '''
         main function
@@ -68,13 +63,12 @@ def main():
     # read the number of search queries
     lines = int(input())
     # read the search queries into a list
-    queries = ''
+    queries = []
     for i in range(lines):
-        queries += input().lower()
+        queries.append(input())
         i += 1
-
     # call process queries
-    print(process_queries(search_index, queries))
+    process_queries(search_index, queries)
 
 if __name__ == '__main__':
     main()
