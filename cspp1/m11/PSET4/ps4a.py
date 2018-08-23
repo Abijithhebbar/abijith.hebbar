@@ -161,6 +161,14 @@ def isValidWord(word, hand, wordList):
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
     """
+    if word not in wordList:
+        return False
+    dict_word = getFrequencyDict(word)
+    if letter not in hand:
+        return False
+    if dict_word.get(letter) > hand.get(letter):
+        return False
+    return True
 
 
 
@@ -174,8 +182,10 @@ def calculateHandlen(hand):
     hand: dictionary (string-> int)
     returns: integer
     """
-   
-
+    s = 0
+    for i in hand:
+        s = s + 1
+    return s
 
 def playHand(hand, wordList, n):
     """
