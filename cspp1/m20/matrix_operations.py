@@ -30,7 +30,7 @@ def mult_matrix(matrix_1, matrix_2):
                 #+ matrix_1[i][j]*matrix_2[j+1][i] + matrix_1[i][j]*matrix_2[j+2][i])
         return h
     else:
-        print("Error: Matrix shapes invalid for multiplication")
+        print("Error: Matrix shapes invalid for mult")
         return None
 
 def add_matrix(matrix_1, matrix_2):
