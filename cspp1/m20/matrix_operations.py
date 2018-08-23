@@ -12,10 +12,10 @@ def mult_matrix(matrix_1, matrix_2):
     c = len(matrix_2)
     d = len(matrix_2[0])
     h = []
-    h = [0]*b
+    h = [0]*a
     for i in range(d):
-        h[i] = [0]*a
-    print(h)
+        h[i] = [0]*d
+    # print(h)
     if b == c:
         # for i in range(a):
         #     for j in range(b):
