@@ -12,8 +12,8 @@ def mult_matrix(matrix_1, matrix_2):
     columns_matrix_2 = len(matrix_2[0])
     result_mul = [[0 for j in range(len(matrix_1))]for i in range(len(matrix_1[0]))]
     if columns_matrix_1 == rows_matrix_2:
-        for i in range(rows_matrix_1):
-            for j in range(columns_matrix_2):
+        for i in range(columns_matrix_1):
+            for j in range(rows_matrix_2):
                 for k in range(rows_matrix_2):
                     result_mul[i][j] += matrix_1[i][k] * matrix_2[k][j]
         return result_mul
@@ -76,7 +76,7 @@ def main():
     # add matrix 1 and matrix 2
 
     # multiply matrix 1 and matrix 2
-    matrix_1= read_matrix()
+    matrix_1 = read_matrix()
     matrix_2 = read_matrix()
     print(add_matrix(matrix_1, matrix_2))
     print(mult_matrix(matrix_1, matrix_2))
