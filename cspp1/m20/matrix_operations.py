@@ -59,11 +59,15 @@ def read_matrix():
     columns_ = int(rows_columns[1])
     for i in range(rows_):
         matrix_.append(list(map(int, input().rstrip().split())))
+    # print(len(matrix_))
+    # print(len(matrix_[0]))
+    # print(rows_columns[1])
+    # print(rows_columns[0])
     if len(matrix_) == rows_columns[0] and len(matrix_[0]) == rows_columns[1]:
-        return matrix_
-    else:
         print("Error: Invalid input for the matrix")
         return None
+    else:
+        return matrix_
 def main():
     # read matrix 1
 
