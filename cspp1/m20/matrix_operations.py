@@ -48,25 +48,26 @@ def add_matrix(matrix_1, matrix_2):
     c = len(matrix_2)
     d = len(matrix_2[0])
     k = []
-    k =[0]*b
-    for i in range(d):
-        k[i] = [0]*a
+    k =[0]*a
+    for i in range(b):
+        k[i] = [0]*b
+    print(k)
     # h = []
     # q = []
     # g = []
     # # 
-    if a == c and b == d:
-        for i in range(a):
-            for j in range(d):
-                k[i][j] = matrix_1[i][j]+matrix_2[i][j]
-        # k += i+j
-        # x = len(k)
-        # z=x//2
-        # z=z+1
-        # for y in range(x):
-        #     if y<=(x/2)-1:
-        #         # print(z)
-        #         h.append(k[y])
+    # if a == c and b == d:
+    #     for i in range(a):
+    #         for j in range(b):
+    #             k[i][j] = matrix_1[i][j]+matrix_2[i][j]
+    #     # k += i+j
+    #     # x = len(k)
+    #     # z=x//2
+    #     # z=z+1
+    #     # for y in range(x):
+    #     #     if y<=(x/2)-1:
+    #     #         # print(z)
+    #     #         h.append(k[y])
                 
                 
                 
