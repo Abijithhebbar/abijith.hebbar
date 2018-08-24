@@ -1,47 +1,34 @@
-'''Tic_Tac_Toe'''
+'''program for checking various conditions in game'''
 def tic_tac_toe(matrix):
-   '''Tic_Tac_Toe'''
-   n = len(matrix[0])
-   winner = []
-   for row in matrix:
-       if len(set(row)) == 1:
-           winner.append(row[0])
-   for i in range(0, n):
-       lis1 = []
-       for j in range(0, n):
-           lis1.append(matrix[j][i])
-       if len(set(lis1)) == 1:
-           winner.append(matrix[j][i])
-   lis2 = []
-   for i in range(0, n):
-       lis2.append(matrix[i][i])
-   if len(set(lis2)) == 1:
-       winner.append(matrix[i][i])
-   lis3 = []
-   for i in range(0, n):
-       lis3.append(matrix[(n-1)-i][i])
-   if len(set(lis3)) == 1:
-       winner.append(matrix[i][i])
-   winner = list(set(winner))
-   if winner == []:
-       print('draw')
-       return None
-   if len(winner) == 1:
-       if winner[0] == 'x' or winner[0] == 'o':
-           print(winner[0])
-       else:
-           print("invalid input")
-       return winner[0]
-   else:
-       print("invalid game")
-       return None
+    '''function for playing Tictactoe game'''
+    result = []
+    for i in range(0, 3):
+        if matrix[i][0] == matrix[i][1] == matrix[i][2]:
+            result.append(matrix[i][0])
+    for i in range(0, 3):
+        if matrix[0][i] == matrix[1][i] == matrix[2][i]:
+            result.append(matrix[0][i])
+    if matrix[0][0] == matrix[1][1] == matrix[2][2]:
+        result.append(matrix[0][0])
+    if matrix[2][0] == matrix[1][1] == matrix[0][2]:
+        result.append(matrix[0][2])
+    if result == []:
+        print('draw')
+        return None
+    if len(result) == 1:
+        if result[0] == 'x' or result[0] == 'o':
+            print(result[0])
+        else:
+            print("invalid input")
+        return result[0]
+    else:
+        print("invalid game")
+        return None
 def main():
-   '''main'''
-   n = int(input())
-   matrix = []
-   for _ in range(0,n):
-       col = input().split(' ')
-       matrix.append(col)
-   tic_tac_toe(matrix)
+    '''main function '''
+    matrix = []
+    for _ in range(0, 3):
+        matrix.append(input().split())
+    tic_tac_toe(matrix)
 if __name__ == '__main__':
-   main()
+    main()
