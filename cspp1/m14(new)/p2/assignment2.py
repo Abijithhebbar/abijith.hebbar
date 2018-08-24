@@ -1,4 +1,3 @@
-
 ''' Problem 2 - PlaintextMessage '''
 # For this problem, the graders will use our implementation of the Message class,
 # so don't worry if you did not get the previous parts correct.
@@ -196,5 +195,3 @@ def main():
     print(data.get_message_text_encrypted())
 if __name__ == "__main__":
     main()
-assignment2.py
-Displaying assignment1.py.
