@@ -6,7 +6,7 @@ def clean_string(inp_string):
     """ Clean function"""
     new_string = ""
     for word in inp_string:
-        if word not in "`~!@#$%^&*()_+=-\''":
+        if word not in "`~!@#$%^&*()_+=.-\''":
             new_string += word
     return new_string.replace(" ", "")
 
