@@ -41,8 +41,7 @@ def frequency_graph(dictionary):
 
 def main():
 	"""main function"""
-    dictionary = eval(input())
-    frequency_graph(dictionary)
-
+	dictionary = eval(input())
+	frequency_graph(dictionary)
 if __name__ == '__main__':
     main()
