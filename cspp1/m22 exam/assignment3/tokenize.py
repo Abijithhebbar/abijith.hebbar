@@ -3,13 +3,15 @@ Write a function to tokenize a given string and return a dictionary with the fre
 each word
 '''
 # output_dictionary = {}
+
 def tokenize(string_input):
     """Tokenize function"""
     output_dictionary = {}
-    new_string = ""
+    new_string = ''
     for word in string_input:
-        if word not in "`~!@#$%^&*()_+=.-\''":
-            new_string += word
+        if word not in "`~!@#$%^&*()_+=.,;-\''":
+            if word not in '"':
+                new_string += word
     list_input = new_string.split()
     for word in list_input:
         if word in output_dictionary:
