@@ -12,7 +12,7 @@ def tokenize(string_input):
             output_dictionary[word] += 1
         else:
             output_dictionary.update({word:1})
-    return set(output_dictionary)
+    return output_dictionary
     # for key in list_input:
     #     key = re.sub('[^a-zA-z0-9]', '', key)
     #     if key not in output_dictionary:
