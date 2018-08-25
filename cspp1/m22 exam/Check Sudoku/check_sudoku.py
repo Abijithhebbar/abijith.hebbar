@@ -33,7 +33,7 @@ def check_sudoku(sudoku):
         for j in range(0, 3, 1):
             if j < 3:
                 if sudoku[j][i] == sudoku[j+1][i]:
-                    output False
+                    output = False
     for i in range(3, 6, 1):
         for j in range(3, 6, 1):
             if j < 5:
@@ -43,7 +43,7 @@ def check_sudoku(sudoku):
         for j in range(3, 6, 1):
             if j < 5:
                 if sudoku[j][i] == sudoku[j+1][i]:
-                    output False
+                    output = False
     for i in range(6, 9, 1):
         for j in range(6, 9, 1):
             if j < 8:
@@ -53,7 +53,7 @@ def check_sudoku(sudoku):
         for j in range(6, 9, 1):
             if j < 8:
                 if sudoku[j][i] == sudoku[j+1][i]:
-                    output False
+                    output = False
 
 
     return output
