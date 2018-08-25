@@ -4,6 +4,7 @@ alphabets in both upper and lower case and numbers.
 '''
 
 def clean_string(string):
+	new_string = ""
     for word in string:
     	if word not in "``!@#$%^&*()_+=-\'":
     		new_string += word
