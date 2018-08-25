@@ -6,7 +6,10 @@ each word
 def tokenize(string_input):
     """Tokenize function"""
     output_dictionary = {}
-    list_input = string_input.split()
+    for word in string_input:
+        if word not in "`~!@#$%^&*()_+=.-\''":
+            new_string += word
+    list_input = new_string.split()
     for word in list_input:
         if word in output_dictionary:
             output_dictionary[word] += 1
